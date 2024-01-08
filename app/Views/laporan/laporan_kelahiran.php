@@ -16,16 +16,16 @@
 <div class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12">
+            <div class="col-7">
                 <div class="card card-primary card-outline">
                     <div class="card-body">
 
                         <?= form_open('laporan/cetak_kelahiran', ['target' => '_blank']); ?>
-                        <div class="col-4">
+                        <div class="col-6">
                             <label class="form-label">Tanggal Awal</label>
                             <input type="date" class="form-control" name="tglawal" id="tglawal" required>
                         </div>
-                        <div class="col-4">
+                        <div class="col-6">
                             <label class="form-label">Tanggal Akhir</label>
                             <input type="date" class="form-control" name="tglakhir" id="tglakhir" required>
                         </div>
