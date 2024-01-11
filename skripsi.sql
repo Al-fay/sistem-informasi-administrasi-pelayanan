@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 05, 2024 at 03:11 AM
+-- Generation Time: Jan 11, 2024 at 01:24 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.1.17
 
@@ -47,13 +47,6 @@ CREATE TABLE `datang` (
   `pengantar_rt` varchar(36) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `datang`
---
-
-INSERT INTO `datang` (`id_datang`, `id_pengguna`, `id_pemohon`, `tanggal`, `kepala_keluarga`, `tempat_lahir`, `tgl_lahir`, `jenis_kelamin`, `status_perkawinan`, `alamat_asal`, `alamat_sekarang`, `telepon`, `data_anggotakeluarga`, `kk`, `status`, `surat_datang`, `pengantar_rt`) VALUES
-(2, NULL, 6, '2023-11-30 01:24:58', 'coba1', 'Pekalongan', '2023-11-30', '1', '1', 'pekajangan', 'kdw brt', '098658463382', '-', '1701350698_2f291cca9657042803e3.pdf', '2', '1701351253_bea2c11c38a7c4924df2.pdf', '1701350698_2e980f6702ea7552b29e.jpg');
-
 -- --------------------------------------------------------
 
 --
@@ -83,8 +76,7 @@ CREATE TABLE `kelahiran` (
 --
 
 INSERT INTO `kelahiran` (`id_kelahiran`, `id_pengguna`, `id_pemohon`, `no_surat`, `tanggal`, `nama_anak`, `nama_ibu`, `nama_ayah`, `alamat`, `jenis_kelamin`, `tgl_kelahiran`, `tempat_kelahiran`, `status_kelahiran`, `surat_kelahiran`, `pengantar_rt`) VALUES
-(1, 1, 6, '474.5/2023/001', '2023-11-27 04:15:18', 'coba', 'coba', 'coba', 'coba', '2', '2023-11-27', 'coba', '2', '1701387278_24d5d710f15f6d2110cf.pdf', '1701058518_b1d78c90304929abb6c8.jpg'),
-(2, 1, NULL, NULL, '2023-12-19 01:45:53', 'coba99', 'coba', 'coba', 'kdw barat', '1', '2023-12-19', 'pekalongan', '3', '', '1702950353_2518b86f2249213711aa.jpg');
+(1, NULL, 6, NULL, '2024-01-11 12:23:32', 'coba', 'coba', 'coba', 'kdw brt', '1', '2024-01-11', 'Pekalongan', '1', '', '1704975812_5232261cc92ba6fbc984.jpg');
 
 -- --------------------------------------------------------
 
@@ -112,13 +104,6 @@ CREATE TABLE `kematian` (
   `pengantar_rt` varchar(36) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `kematian`
---
-
-INSERT INTO `kematian` (`id_meninggal`, `id_pengguna`, `id_pemohon`, `no_surat`, `tanggal`, `nama_meninggal`, `jenis_kelamin`, `alamat`, `umur`, `tgl_meninggal`, `tempat_meninggal`, `sebab_meninggal`, `nik`, `no_kk`, `status`, `surat_kematian`, `pengantar_rt`) VALUES
-(2, NULL, 6, '474.3/2023/001', '2023-11-30 01:22:26', 'coba1', '1', 'coba1', 70, '2023-11-30', 'Rumah Sakit', 'Sakit Tua', '3029305698378465', '3326139298230003', '2', '1701387861_195c82c3d64b79bcfcc4.pdf', '1701350546_636711eeb00caa5cf20a.jpg');
-
 -- --------------------------------------------------------
 
 --
@@ -145,13 +130,6 @@ CREATE TABLE `keterangan` (
   `surat_keterangan` varchar(35) NOT NULL,
   `pengantar_rt` varchar(36) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `keterangan`
---
-
-INSERT INTO `keterangan` (`id_keterangan`, `id_pengguna`, `id_pemohon`, `no_surat`, `nama`, `tempat_lahir`, `tgl_lahir`, `negara`, `agama`, `pekerjaan`, `alamat`, `no_ktp`, `keperluan`, `keterangan`, `tanggal`, `status`, `surat_keterangan`, `pengantar_rt`) VALUES
-(2, NULL, 6, '422.8/2023/001', 'Sky Strike Ace: Raye', 'Pekalongan', '2023-11-30', 'Indonesia', '1', 'Karyawan Swasta', 'kdw brt', '3326139876000002', '2', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus', '2023-11-30 01:26:26', '2', '1701351295_991a1e0a1df694191796.pdf', '1701350786_a709cb58de44d9a6d7e8.jpg');
 
 -- --------------------------------------------------------
 
@@ -209,14 +187,6 @@ CREATE TABLE `pengantar` (
   `pengantar_rt` varchar(36) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `pengantar`
---
-
-INSERT INTO `pengantar` (`id_pengantar`, `id_pengguna`, `id_pemohon`, `no_surat`, `nama`, `tempat_lahir`, `tgl_lahir`, `negara`, `agama`, `pekerjaan`, `alamat`, `no_ktp`, `keperluan`, `keterangan`, `tanggal`, `status`, `surat_pengantar`, `pengantar_rt`) VALUES
-(1, 1, NULL, '475.2/2023/001', 'Raye', 'Pekalongan', '2023-11-27', 'Indonesia', '2', 'Karyawan Swasta', 'kdw brt', '3326139876000002', '2', 'kehilangan ktp saat pulang dari Wonopringgo', '2023-11-27', '2', '', '1701091301_e3dc23f08fb9ffc4c213.jpg'),
-(2, NULL, 6, NULL, 'Sky Strike Ace: Raye', 'Pekalongan', '2023-11-30', 'Indonesia', '1', 'Karyawan Swasta', 'kdw brt', '3326139876000002', '3', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus', '2023-11-30', '1', '1701351316_45a3d8914e7b0d5925ce.pdf', '1701350826_c35aee456af7e02e52e8.jpg');
-
 -- --------------------------------------------------------
 
 --
@@ -269,13 +239,6 @@ CREATE TABLE `pindah` (
   `surat_pindah` varchar(35) NOT NULL,
   `pengantar_rt` varchar(36) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `pindah`
---
-
-INSERT INTO `pindah` (`id_pindah`, `id_pengguna`, `id_pemohon`, `tanggal`, `no_kk`, `nama`, `nik`, `jenis_kelamin`, `jenis_permohonan`, `pekerjaan`, `alamat_asal`, `klasifikasi_perpindahan`, `alamat_pindah`, `alasan_pindah`, `jenis_kepindahan`, `anggotakeluarga_tidakpindah`, `anggotakeluarga_pindah`, `daftarpindah`, `kk`, `foto`, `status`, `surat_pindah`, `pengantar_rt`) VALUES
-(2, NULL, 6, '2023-11-30 00:00:00', '3273264244903900', 'Raye', '3326139274530003', '1', 'Surat Keterangan Pindah', 'Karyawan Swasta', 'kdw brt', '1', 'pekajangan', '1', '1', '2', '2', 'coba', '1701350647_4283e2c0b208b034b5b1.pdf', '1701350647_579701d1f7101a2ca4ed.jpg', '3', '', '1701350647_89fc28d241a5276b843d.jpg');
 
 --
 -- Indexes for dumped tables
@@ -349,25 +312,25 @@ ALTER TABLE `pindah`
 -- AUTO_INCREMENT for table `datang`
 --
 ALTER TABLE `datang`
-  MODIFY `id_datang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_datang` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `kelahiran`
 --
 ALTER TABLE `kelahiran`
-  MODIFY `id_kelahiran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_kelahiran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `kematian`
 --
 ALTER TABLE `kematian`
-  MODIFY `id_meninggal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_meninggal` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `keterangan`
 --
 ALTER TABLE `keterangan`
-  MODIFY `id_keterangan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_keterangan` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `pemohon`
@@ -379,7 +342,7 @@ ALTER TABLE `pemohon`
 -- AUTO_INCREMENT for table `pengantar`
 --
 ALTER TABLE `pengantar`
-  MODIFY `id_pengantar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_pengantar` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `pengguna`
@@ -391,7 +354,7 @@ ALTER TABLE `pengguna`
 -- AUTO_INCREMENT for table `pindah`
 --
 ALTER TABLE `pindah`
-  MODIFY `id_pindah` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_pindah` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
